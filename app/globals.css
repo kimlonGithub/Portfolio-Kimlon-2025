@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Outfit, sans-serif;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@layer utilities {
+  .typing-loop {
+    animation: typing 6s steps(40, end) infinite, blink 0.5s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid black;
+  }
+}
