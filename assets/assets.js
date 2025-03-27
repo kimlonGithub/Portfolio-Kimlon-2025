@@ -108,9 +108,9 @@ export const serviceData = [
   },
   {
     icon: assets.mobile_icon,
-    title: "Mobile app",
+    title: "Web Development",
     description:
-      "Mobile app development involves creating software for mobile devices...",
+      "Web development involves creating and maintaining websites and web applications...",
     link: "",
   },
   {
