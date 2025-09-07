@@ -1,8 +1,8 @@
-import { assets, infoList, toolsData } from "@/assets/assets";
+import { assets, infoList, toolsData } from "../../assets/assets";
 import Image from "next/image";
 import React from "react";
 
-const About = ({ isDarkMode }) => {
+const About = () => {
   return (
     <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
@@ -31,7 +31,7 @@ const About = ({ isDarkMode }) => {
                 key={index}
               >
                 <Image
-                  src={isDarkMode ? iconDark : icon}
+                  src={iconDark}
                   alt={title}
                   className="w-7 mt-3"
                 />

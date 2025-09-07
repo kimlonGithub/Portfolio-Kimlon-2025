@@ -1,8 +1,8 @@
-import { assets, workData } from "@/assets/assets";
+import { assets, workData } from "../../assets/assets";
 import Image from "next/image";
 import React from "react";
 
-const Work = ({ isDarkMode }) => {
+const Work = () => {
   return (
     <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
@@ -40,7 +40,7 @@ const Work = ({ isDarkMode }) => {
         Show more{" "}
         <Image
           src={
-            isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
+            assets.right_arrow_bold_dark
           }
           alt="Right_arrow_bold"
           className="w-4"

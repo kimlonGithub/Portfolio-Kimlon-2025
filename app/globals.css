@@ -6,6 +6,21 @@
   font-family: Outfit, sans-serif;
 }
 
+body {
+  background-color: #f5f5f5;
+  cursor: none; /* Hide default cursor */
+}
+
+/* Custom cursor styles */
+* {
+  cursor: none !important;
+}
+
+/* Interactive elements should show pointer cursor */
+a, button, [role="button"], input, textarea, select {
+  cursor: none !important;
+}
+
 @keyframes typing {
   0% {
     width: 0%;
@@ -28,6 +43,37 @@
   }
 }
 
+@keyframes cursorPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes cursorRipple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes cursorGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(59, 130, 246, 0.4);
+  }
+}
+
 @layer utilities {
   .typing-loop {
     animation: typing 6s steps(40, end) infinite, blink 0.5s step-end infinite;
@@ -35,5 +81,17 @@
     overflow: hidden;
     display: inline-block;
     border-right: 2px solid black;
+  }
+  
+  .cursor-pulse {
+    animation: cursorPulse 2s ease-in-out infinite;
+  }
+  
+  .cursor-ripple {
+    animation: cursorRipple 0.6s ease-out;
+  }
+  
+  .cursor-glow {
+    animation: cursorGlow 3s ease-in-out infinite;
   }
 }
